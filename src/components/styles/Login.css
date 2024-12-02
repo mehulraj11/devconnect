@@ -1,0 +1,171 @@
+body {
+  background-color: #fafbfc;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#loginPage {
+  background-color: white;
+  border-radius: 8px;
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#loginTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+#thirdPartyLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.thirdParty {
+  font-size: 1rem;
+  height: 40px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s ease;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.thirdParty:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.icon {
+  width: 30px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.text-with-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.text-with-lines::before,
+.text-with-lines::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.text-with-lines span {
+  font-weight: 500;
+  color: #555;
+}
+
+.login-form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafbfc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #fafbfc;
+  color: #333;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ff4500;
+  box-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #ff6f2f;
+}
+
+.forgot-password,
+.sign-up {
+  font-size: 0.9rem;
+  color: #0079d3;
+  margin-top: 1rem;
+  display: block;
+}
+
+.forgot-password:hover,
+.sign-up:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  #loginPage {
+    width: 90%;
+    margin-top: 3rem;
+  }
+
+  #loginTitle {
+    font-size: 2rem;
+  }
+
+  .thirdParty {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+  }
+}
