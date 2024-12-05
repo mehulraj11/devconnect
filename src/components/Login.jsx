@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import PhoneIcon from "@mui/icons-material/Phone";
 import GoogleIcon from "@mui/icons-material/Google";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import UserContext from "../context/UserContext";
 export const Login = () => {
+  const { setUser } = useContext(UserContext);
   //   console.log(`Consoled into Login Page`);
   const [formData, setFormData] = useState({
     username: "",
@@ -19,8 +21,9 @@ export const Login = () => {
     }));
   };
   const handleSubmit = (e) => {
-    console.log(formData);
+    // console.log(formData);
     e.preventDefault();
+    setUser(formData);
     setFormData(() => ({
       username: "",
       password: "",

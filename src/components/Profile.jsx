@@ -1,7 +1,12 @@
 import "./styles/Profile.css";
 import { Navbar } from "./Navbar.jsx";
 import dp from "../assets/WhatsApp Image 2024-11-30 at 2.40.18 PM.jpeg";
+import { useContext } from "react";
+import UserContext from "../context/UserContext.js";
 export const Profile = () => {
+  console.log(`Profile component`)
+  const { user } = useContext(UserContext);
+  console.log(user)
   const handleEditProfileClick = () => {
     console.log(`Edit Profile Click`);
   };
@@ -15,8 +20,9 @@ export const Profile = () => {
             <img src={dp} alt="" />
           </div>
           <div id="profileUsername">
-            <p>Mehul</p>
+            {user?.username ? <p>{user.username}</p> : <p>Please log in</p>}
           </div>
+
           <div id="editProfile" onClick={handleEditProfileClick}>
             Edit Profile
           </div>
