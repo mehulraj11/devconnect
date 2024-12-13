@@ -10,9 +10,8 @@ const App = () => {
     <UserContextProvider>
       <Router>
         <Routes>
-          {/* currently it is home route */}
-          <Route path="/" element={<Profile />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
